@@ -14,7 +14,7 @@ class Image(Timestamps):
         help_text=_('HT__USER')
     )
 
-    data = models.TextField(
+    data = models.BinaryField(
         null=True,
         blank=True,
         verbose_name=_('VN__DATA'),
