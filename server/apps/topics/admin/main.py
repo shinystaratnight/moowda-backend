@@ -6,7 +6,7 @@ from ..models import Image, Topic, TopicMessage
 
 @admin.register(Image)
 class ImageAdmin(BaseModelAdmin):
-    list_display = ('user', 'data')
+    list_display = ('user', 'url')
 
 
 @admin.register(Topic)

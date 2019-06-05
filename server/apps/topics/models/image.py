@@ -14,11 +14,11 @@ class Image(Timestamps):
         help_text=_('HT__USER')
     )
 
-    data = models.BinaryField(
+    url = models.ImageField(
         null=True,
         blank=True,
-        verbose_name=_('VN__DATA'),
-        help_text=_('HT__DATA')
+        verbose_name=_('VN__URL'),
+        help_text=_('HT__URL')
     )
 
     class Meta:
