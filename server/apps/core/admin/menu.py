@@ -7,8 +7,5 @@ class AdminMenu(Menu):
 
         self.children += [
             items.MenuItem('Home', reverse('admin:index')),
-            items.AppList(title='Applications'),
-            items.MenuItem('Management', children=[
-                items.MenuItem('Job queue', '/admin/flower/'),
-            ])
+            items.AppList(title='Applications')
         ]
