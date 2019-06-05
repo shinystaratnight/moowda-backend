@@ -24,6 +24,7 @@ celery = "4.1.*"
 flower = "*"
 redis = "*"
 psycopg2-binary = "*"
+pillow = "^6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
