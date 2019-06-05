@@ -17,15 +17,6 @@ class User(Timestamps, AbstractBaseUser, PermissionsMixin):
         help_text=_('HT__LOGIN')
     )
 
-    name = models.CharField(
-        max_length=150,
-        null=True,
-        blank=True,
-        unique=True,
-        verbose_name=_('VN__NAME'),
-        help_text=_('HT__NAME')
-    )
-
     email = models.EmailField(
         max_length=150,
         null=True,

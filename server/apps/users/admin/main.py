@@ -15,7 +15,7 @@ admin.site.unregister(Group)
 class UserAdmin(AdminFormFieldsOverridesMixin,
                 DjUserAdmin):
     list_display = (
-        'login', 'name', 'email', 'last_login', 'is_active', 'is_staff', 'change_password_link'
+        'login', 'email', 'last_login', 'is_active', 'is_staff', 'change_password_link'
     )
     list_filter = ('is_active', 'is_staff', 'is_active')
     ordering = ('login',)
