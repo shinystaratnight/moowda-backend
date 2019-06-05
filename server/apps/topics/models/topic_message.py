@@ -47,3 +47,37 @@ class TopicMessage(Timestamps):
 
     def __str__(self):
         return f'{self.content[:15]}'
+
+
+class TopicMessageRead(Timestamps):
+    message = models.ForeignKey(
+        TopicMessage,
+        models.CASCADE,
+        related_name='topic_messages_read',
+        verbose_name=_('VN__MESSAGE'),
+        help_text=_('HT__MESSAGE')
+    )
+
+    topic = models.ForeignKey(
+        Topic,
+        models.CASCADE,
+        related_name='topic_messages_read',
+        verbose_name=_('VN__TOPIC'),
+        help_text=_('HT__TOPIC')
+    )
+
+    user = models.ForeignKey(
+        User,
+        models.CASCADE,
+        related_name='topic_messages_read',
+        verbose_name=_('VN__USER'),
+        help_text=_('HT__USER')
+    )
+
+    class Meta:
+        verbose_name = _('VN__TOPIC_MESSAGE_READ')
+        verbose_name_plural = _('VN__TOPIC_MESSAGES_READ')
+        ordering = ('-created_at',)
+
+    def __str__(self):
+        return f'{self.content[:15]}'
