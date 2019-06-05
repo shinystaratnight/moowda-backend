@@ -48,10 +48,10 @@ class TokenSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'login')
+        fields = ('id', 'login')
 
 
 class UserCardSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name')
+        fields = ('id')
