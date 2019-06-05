@@ -34,6 +34,7 @@ class TopicMessage(Timestamps):
     images = models.ManyToManyField(
         Image,
         blank=True,
+        null=True,
         related_name='topic_messages',
         verbose_name=_('VN__IMAGE'),
         help_text=_('HT__IMAGE')

@@ -4,8 +4,10 @@ from django.utils.translation import gettext_lazy as _
 
 from apps.users.db.managers import CustomUserManager
 
+from server.apps.core.db.mixins import Timestamps
 
-class User(AbstractBaseUser, PermissionsMixin):
+
+class User(Timestamps, AbstractBaseUser, PermissionsMixin):
     login = models.CharField(
         max_length=150,
         null=True,
