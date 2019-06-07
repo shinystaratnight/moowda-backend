@@ -78,7 +78,7 @@ class TopicMessageRead(Timestamps):
         verbose_name = _('VN__TOPIC_MESSAGE_READ')
         verbose_name_plural = _('VN__TOPIC_MESSAGES_READ')
         ordering = ('-created_at',)
-        unique_together = ('message', 'user')
+        unique_together = ('topic', 'user')
 
     def __str__(self):
         return f'{self.content[:15]}'
