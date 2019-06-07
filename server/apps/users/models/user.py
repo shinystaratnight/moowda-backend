@@ -38,6 +38,15 @@ class User(Timestamps, AbstractBaseUser, PermissionsMixin):
         help_text=_('HT__IS_ACTIVE')
     )
 
+    reset_password_hash = models.CharField(
+        max_length=150,
+        null=True,
+        blank=True,
+        unique=True,
+        verbose_name=_('VN__RESET_PASSWORD_HASH'),
+        help_text=_('HT__RESET_PASSWORD_HASH')
+    )
+
     USERNAME_FIELD = 'login'
 
     objects = CustomUserManager()

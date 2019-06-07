@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-31 11:48+0300\n"
+"POT-Creation-Date: 2019-06-07 12:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,29 +24,33 @@ msgstr "Topics"
 
 #: server/apps/topics/models/image.py:13
 #: server/apps/topics/models/topic_message.py:23
-#: server/apps/users/models/user.py:53
+#: server/apps/topics/models/topic_message.py:73
+#: server/apps/users/models/user.py:55
 msgid "VN__USER"
 msgstr "User"
 
 #: server/apps/topics/models/image.py:14
 #: server/apps/topics/models/topic_message.py:24
+#: server/apps/topics/models/topic_message.py:74
 #, fuzzy
 #| msgid "VN__USER"
 msgid "HT__USER"
 msgstr "User"
 
 #: server/apps/topics/models/image.py:20
-msgid "VN__DATA"
-msgstr "Data"
+#, fuzzy
+#| msgid "VN__USER"
+msgid "VN__URL"
+msgstr "User"
 
 #: server/apps/topics/models/image.py:21
 #, fuzzy
-#| msgid "VN__DATA"
-msgid "HT__DATA"
-msgstr "Data"
+#| msgid "VN__USER"
+msgid "HT__URL"
+msgstr "User"
 
 #: server/apps/topics/models/image.py:25
-#: server/apps/topics/models/topic_message.py:38
+#: server/apps/topics/models/topic_message.py:39
 msgid "VN__IMAGE"
 msgstr "Image"
 
@@ -76,10 +80,12 @@ msgstr "Owner"
 
 #: server/apps/topics/models/topic.py:24
 #: server/apps/topics/models/topic_message.py:15
+#: server/apps/topics/models/topic_message.py:65
 msgid "VN__TOPIC"
 msgstr "Topic"
 
 #: server/apps/topics/models/topic_message.py:16
+#: server/apps/topics/models/topic_message.py:66
 msgid "HT__TOPIC"
 msgstr "Topic"
 
@@ -93,21 +99,45 @@ msgstr "Content"
 msgid "HT__CONTENT"
 msgstr "Content"
 
-#: server/apps/topics/models/topic_message.py:39
+#: server/apps/topics/models/topic_message.py:40
 #, fuzzy
 #| msgid "VN__IMAGE"
 msgid "HT__IMAGE"
 msgstr "Image"
 
-#: server/apps/topics/models/topic_message.py:43
+#: server/apps/topics/models/topic_message.py:44
 msgid "VN__TOPIC_MESSAGE"
 msgstr "Topic Message"
 
-#: server/apps/topics/models/topic_message.py:44
+#: server/apps/topics/models/topic_message.py:45
 msgid "VN__TOPIC_MESSAGES"
 msgstr "Topic Messages"
 
-#: server/apps/users/apps.py:8 server/apps/users/models/user.py:54
+#: server/apps/topics/models/topic_message.py:57
+#, fuzzy
+#| msgid "VN__IMAGE"
+msgid "VN__MESSAGE"
+msgstr "Image"
+
+#: server/apps/topics/models/topic_message.py:58
+#, fuzzy
+#| msgid "VN__IMAGE"
+msgid "HT__MESSAGE"
+msgstr "Image"
+
+#: server/apps/topics/models/topic_message.py:78
+#, fuzzy
+#| msgid "VN__TOPIC_MESSAGE"
+msgid "VN__TOPIC_MESSAGE_READ"
+msgstr "Topic Message"
+
+#: server/apps/topics/models/topic_message.py:79
+#, fuzzy
+#| msgid "VN__TOPIC_MESSAGES"
+msgid "VN__TOPIC_MESSAGES_READ"
+msgstr "Topic Messages"
+
+#: server/apps/users/apps.py:8 server/apps/users/models/user.py:56
 msgid "VN__USERS"
 msgstr "User"
 
@@ -123,45 +153,45 @@ msgstr "Token"
 msgid "VN__TOKENS"
 msgstr "Tokens"
 
-#: server/apps/users/models/user.py:14
+#: server/apps/users/models/user.py:16
 msgid "VN__LOGIN"
 msgstr "Login"
 
-#: server/apps/users/models/user.py:15
+#: server/apps/users/models/user.py:17
 msgid "HT__LOGIN"
 msgstr "Login"
 
-#: server/apps/users/models/user.py:23
-msgid "VN__NAME"
-msgstr "Name"
-
-#: server/apps/users/models/user.py:24
-msgid "HT__NAME"
-msgstr "Name"
-
-#: server/apps/users/models/user.py:32
+#: server/apps/users/models/user.py:25
 msgid "VN__EMAIL"
 msgstr "Email"
 
-#: server/apps/users/models/user.py:33
+#: server/apps/users/models/user.py:26
 msgid "HT__EMAIL"
 msgstr "Email"
 
-#: server/apps/users/models/user.py:38
+#: server/apps/users/models/user.py:31
 msgid "VN__IS_STAFF"
 msgstr "Is staff"
 
-#: server/apps/users/models/user.py:39
+#: server/apps/users/models/user.py:32
 msgid "HT__IS_STAFF"
 msgstr "Is staff"
 
-#: server/apps/users/models/user.py:44
+#: server/apps/users/models/user.py:37
 msgid "VN__IS_ACTIVE"
 msgstr "Is active"
 
-#: server/apps/users/models/user.py:45
+#: server/apps/users/models/user.py:38
 msgid "HT__IS_ACTIVE"
 msgstr "Is active"
+
+#: server/apps/users/models/user.py:46
+msgid "VN__RESET_PASSWORD_HASH"
+msgstr ""
+
+#: server/apps/users/models/user.py:47
+msgid "HT__RESET_PASSWORD_HASH"
+msgstr ""
 
 #: server/apps/users/rest/serializers.py:24
 msgid "MESSAGE_UNABLE_TO_LOGIN_WITH_PROVIDED_CREDENTIALS"
@@ -1506,3 +1536,17 @@ msgstr ""
 msgctxt "stick"
 msgid "club"
 msgstr ""
+
+#~ msgid "VN__DATA"
+#~ msgstr "Data"
+
+#, fuzzy
+#~| msgid "VN__DATA"
+#~ msgid "HT__DATA"
+#~ msgstr "Data"
+
+#~ msgid "VN__NAME"
+#~ msgstr "Name"
+
+#~ msgid "HT__NAME"
+#~ msgstr "Name"
