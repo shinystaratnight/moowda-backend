@@ -32,7 +32,7 @@ class UserAdmin(AdminFormFieldsOverridesMixin,
     exclude = ('user_permissions',)
     fieldsets = (
         (None, {
-            'fields': ('login', 'email', 'is_superuser', 'is_staff', 'is_active', 'last_login')
+            'fields': ('login', 'email', 'reset_password_hash', 'is_superuser', 'is_staff', 'is_active', 'last_login')
         }),
     )
     readonly_fields = ('last_login',)
