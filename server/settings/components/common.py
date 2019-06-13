@@ -7,7 +7,7 @@ DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
 WSGI_APPLICATION = 'server.wsgi.application'
 
-STATIC_URL = '/admin/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR.joinpath('static')
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
