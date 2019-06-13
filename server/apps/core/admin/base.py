@@ -2,10 +2,11 @@ from django import forms
 from django.contrib import admin
 from django.contrib.contenttypes.admin import GenericStackedInline, GenericTabularInline
 
-from apps.core.admin.mixins import AdminFormFieldsOverridesMixin
+from apps.core.admin.mixins import AdminFormFieldsOverridesMixin, AdminAutocompleteListFilterMixin
 
 
-class BaseModelAdmin(AdminFormFieldsOverridesMixin,
+class BaseModelAdmin(AdminAutocompleteListFilterMixin,
+                     AdminFormFieldsOverridesMixin,
                      admin.ModelAdmin):
     list_per_page = 20
 
